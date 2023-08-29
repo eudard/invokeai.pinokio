@@ -37,7 +37,7 @@
     "method": "input",
     "params": {
       "title": "Install Success",
-      "description": "Go back to the dashboard and read info before launch. You need to run [~pinokio\\api\\InvokeAI\\env\\Scripts\\configure_invokeai.exe] before launch!"
+      "description": "Go back to the dashboard and read info before launch. \nYou need to run [~pinokio\\api\\InvokeAI\\env\\Scripts\\configure_invokeai.exe] before launch!"
     }
   }]
 }
