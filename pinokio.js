@@ -13,8 +13,8 @@ module.exports = {
     if (installed) {
       let session = (await kernel.loader.load(path.resolve(__dirname, "session.json"))).resolved
       return [{
-        html: "Now run /env/Scripts/configure_invokeai.exe then you can Launch app",
-        href: "https://www.seznam.cz",
+        html: "Follow instructions before launch",
+        href: "https://github.com/eudard/invokeai.pinokio",
         target: "_blank"
       },{
         when: "start.json",
