@@ -1,0 +1,47 @@
+{
+    "run": [{
+        "method": "shell.start",
+        "params": {
+          "path": "InvokeAI"
+        }
+      }, {
+        "method": "shell.enter",
+        "params": {
+          "message": "{{os.platform() === 'win32' ? 'env\\\\Scripts\\\\activate' : 'source env/bin/activate'}} env",
+          "on": [{
+            "event": null,
+            "return": true
+          }]
+        }
+      },{
+        "method": "shell.enter",
+        "params": {
+          "message": "invokeai-configure --root .",
+          "path": "InvokeAI/env/Scripts"
+        }
+      },{
+        "method": "shell.write",
+        "params": {
+          "message": "A",
+          "on": [{
+            "event": "/.*/",
+            "return": true
+          }]
+        }
+      }, {
+        "method": "process.wait",
+        "params": {
+          "sec": 1
+        }
+      }, {
+        "method": "goto",
+        "params": {
+          "index": 3
+        }
+      },{
+        "method": "goto",
+        "params": {
+          "index": "{{input}}"
+        }
+      }]
+  }
